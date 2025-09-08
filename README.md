@@ -43,3 +43,20 @@ A minimal Vue 3 + Vite app that fetches game play data from the provided AWS Lam
   - Column sorting (click headers)
   - Filters for action and emulator
   - Adjustable page size and paging controls
+
+## Deploy to AWS (CDK)
+This repo includes an AWS CDK (v2) stack to host the built SPA on S3 behind CloudFront.
+
+Prerequisites:
+- AWS account and credentials configured (e.g., with `aws configure`).
+- Bootstrap your target environment once: `cd cdk && npm install && npx cdk bootstrap`.
+- Node.js 18+.
+
+Deploy steps:
+1. Build the app from repo root:
+   - `npm run build`
+2. Deploy infra and upload artifacts:
+   - `npm run deploy:aws`
+
+Outputs include the CloudFront domain to access your site. To remove the stack: `cd cdk && npm run destroy`.
+
