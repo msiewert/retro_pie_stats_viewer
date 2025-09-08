@@ -2,6 +2,21 @@
 
 A minimal Vue 3 + Vite app that fetches game play data from the provided AWS Lambda endpoint and renders it in an advanced table with filtering, sorting, and client-side pagination. It also follows pagination using `last_key` to load all pages.
 
+## Tech Stack
+- WebStorm
+- Junie Pro
+- Vue 3 (Composition API)
+- TypeScript
+- Vite (build tool and dev server)
+- @vitejs/plugin-vue
+
+## Development Tools
+- Node.js 18+ (recommended)
+- npm scripts:
+  - dev: vite
+  - build: vite build
+  - preview: vite preview
+
 ## Getting started
 
 1. Install Node.js (v18+ recommended).
