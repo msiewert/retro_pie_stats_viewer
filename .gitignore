@@ -4,3 +4,8 @@ vite.svg
 .DS_Store
 Thumbs.db
 dist
+
+# Local environment files (contain secrets)
+.env
+.env.local
+.env.*.local

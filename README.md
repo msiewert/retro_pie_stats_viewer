@@ -4,11 +4,10 @@ A minimal Vue 3 + Vite app that fetches game play data from the provided AWS Lam
 
 ## Tech Stack
 - WebStorm
-- Junie Pro
+- Amazon Q
 - Vue 3 (Composition API)
 - TypeScript
 - Vite (build tool and dev server)
-- @vitejs/plugin-vue
 
 ## Development Tools
 - Node.js 18+ (recommended)
@@ -16,6 +15,7 @@ A minimal Vue 3 + Vite app that fetches game play data from the provided AWS Lam
   - dev: vite
   - build: vite build
   - preview: vite preview
+- Amazon Q
 
 ## Getting started
 
@@ -24,17 +24,29 @@ A minimal Vue 3 + Vite app that fetches game play data from the provided AWS Lam
    
    npm install
 
-3. Run the dev server:
+3. Configure API key (required):
+   - Create a file named `.env.local` in the project root (this file is git-ignored).
+   - Add the following line, replacing the placeholder with your key:
+     
+     VITE_API_KEY=your_api_key_here
+
+4. Run the dev server:
    
+`
    npm run dev
+`
 
-4. Build for production:
+5. Build for production:
    
+`
    npm run build
+`
 
-5. Preview the production build:
+6. Preview the production build:
    
+`
    npm run preview
+`
 
 ## Notes
 - The app fetches all pages from the API by repeatedly calling the endpoint until `last_key` is null.
@@ -58,5 +70,11 @@ Deploy steps:
 2. Deploy infra and upload artifacts:
    - `npm run deploy:aws`
 
-Outputs include the CloudFront domain to access your site. To remove the stack: `cd cdk && npm run destroy`.
+Outputs include the CloudFront domain to access your site. 
+
+To remove the stack: 
+
+`cd cdk && npm run destroy`
+
+
 
