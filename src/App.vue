@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import { fetchAllPages, type PlayItem } from './services/api'
-import AdvancedTable from './components/AdvancedTable.vue'
+import VuetifyTable from './components/VuetifyTable.vue'
 
 const loading = ref(false)
 const error = ref<string | null>(null)
@@ -37,7 +37,7 @@ onMounted(load)
     <div v-if="loading" class="card">Loading game plays…</div>
     <div v-else-if="error" class="card" style="border-color:#a33;">Error: {{ error }} <button @click="load">Retry</button></div>
     <template v-else>
-      <AdvancedTable :rows="rows" />
+      <VuetifyTable :items="rows" />
     </template>
   </div>
 </template>

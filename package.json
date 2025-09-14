@@ -10,10 +10,12 @@
     "deploy:aws": "npm run build && cd cdk && npm install && npm run deploy"
   },
   "dependencies": {
-    "vue": "^3.4.38"
+    "@mdi/font": "^7.4.47",
+    "vue": "^3.4.38",
+    "vuetify": "^3.10.0"
   },
   "devDependencies": {
-    "vite": "^5.4.1",
-    "@vitejs/plugin-vue": "^5.1.2"
+    "@vitejs/plugin-vue": "^5.1.2",
+    "vite": "^5.4.1"
   }
 }
