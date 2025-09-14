@@ -2,6 +2,15 @@
 
 A minimal Vue 3 + Vite app that fetches game play data from the provided AWS Lambda endpoint and renders it in an advanced table with filtering, sorting, and client-side pagination. It also follows pagination using `last_key` to load all pages.
 
+**Live Demo**: [d3ina1wbkv5y4j.cloudfront.net](https://d3ina1wbkv5y4j.cloudfront.net)
+
+## Disclaimer
+
+This project is entirely AI-generated using Amazon Q Developer. It serves a dual purpose:
+1. **AWS Technical Demonstration**: Showcases practical implementation of AWS services including Lambda, S3, CloudFront, and CDK for infrastructure as code.
+2. **Generative AI Showcase**: Demonstrates the effectiveness of AI-assisted software development.
+3. **Learning Experience**: Wanted more knowledge of AI-assisted software development, AWS CDK with TypeScript, and Vue 3.
+
 ## Tech Stack
 - WebStorm
 - Amazon Q
