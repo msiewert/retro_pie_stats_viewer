@@ -2,6 +2,9 @@
 import { onMounted, ref } from 'vue'
 import { fetchAllPages, type PlayItem } from './services/api'
 import VuetifyTable from './components/VuetifyTable.vue'
+import GamesPlayedChart from './components/GamesPlayedChart.vue'
+import ConsoleGamesChart from './components/ConsoleGamesChart.vue'
+import CrashedGamesChart from './components/CrashedGamesChart.vue'
 
 const loading = ref(false)
 const error = ref<string | null>(null)
@@ -38,6 +41,9 @@ onMounted(load)
     <div v-else-if="error" class="card" style="border-color:#a33;">Error: {{ error }} <button @click="load">Retry</button></div>
     <template v-else>
       <VuetifyTable :items="rows" />
+      <GamesPlayedChart :items="rows" />
+      <ConsoleGamesChart :items="rows" />
+      <CrashedGamesChart :items="rows" />
     </template>
   </div>
 </template>
